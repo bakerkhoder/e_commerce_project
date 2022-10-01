@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>CONQUR | Signup</title>
+    <link rel="stylesheet" href="./css/index.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Signup</h1>
+        <p class="success-message hide">Message</p>
+        <p class="error-message hide">Message</p>
+        <form action="" class="login-form" id="client">
+            <div class="input-container">
+                <input type="text" name="name" class="input" id="name" placeholder="a">
+                <label for="name" class="label">Name</label>
+            </div>
+            <p class="input-message hide" id="input-name">Message</p>
+            <div class="input-container">
+                <input type="text" name="username" class="input" id="username" placeholder="a">
+                <label for="username" class="label">Username</label>
+            </div>
+            <p class="input-message hide" id="input-username">Message</p>
+            <div class="input-container">
+                <input type="text" name="email" class="input" id="email" placeholder="a">
+                <label for="email" class="label">E-mail</label>
+            </div>
+            <p class="input-message hide" id="input-email">Message</p>
+            <div class="input-container">
+                <input type="password" name="password" class="input" id="password" placeholder="a">
+                <label for="password" class="label">Password</label>
+            </div>
+            <p class="input-message hide" id="input-password">Message</p>
+            <div class="input-container">
+                <input type="password" name="password-confirm" class="input" id="password-confirm" placeholder="a">
+                <label for="password-confirm" class="label">Confirm Password</label>
+            </div>
+            <p class="input-message hide" id="input-password-confirm">Message</p>
+            <div class="login-actions">
+                <div class="account-handle">
+                    <a href="./index.html">Have an account?</a>
+                </div>
+
+                <button class="btn btn-submit">Create Account</button>
+            </div>
+
+        </form>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./assets/javascript/api/signup.js"></script>
+</body>
+
+</html>
