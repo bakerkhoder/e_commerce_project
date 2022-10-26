@@ -9,6 +9,6 @@ if (
 
 document.querySelector('#logout').addEventListener('click', (e) => {
   e.preventDefault()
-  localStorage.removeItem('user')
+  localStorage.removeItem('auth')
   window.location.href = 'index.html'
 })
