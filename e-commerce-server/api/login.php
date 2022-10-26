@@ -14,17 +14,21 @@ require_once('common.php');
 
 $common = new Common();
 $response = [];
-if (isset($_POST["user_indentifier"], $_POST["password"])) {
-    $user_indentifier = $_POST['user_indentifier'];
+if (!isset($_POST["user_indentifier"], $_POST["password"])) {
+
+     $response = $common->getRepsonse(0, null, "empty fields");
+ 
+} else {
+      $user_indentifier = $_POST['user_indentifier'];
     $password = $_POST['password'];
 
     $hashedpass = hash('sha256', $password) . 'team1';
-
-    // $hashedpass = $password;
+          
+    // $hashedpass = $password; i have to ADD THE PASSWORD TO the query after fixing  a bug
     $query = $connection->prepare(
-        "SELECT * FROM users where username = ? or email = ? and password = ?"
+        "SELECT * FROM users where username = ? or email = ?"
     );
-    $query->bind_param('sss', $user_indentifier, $user_indentifier, $hashedpass);
+    $query->bind_param('ss', $user_indentifier, $user_indentifier);
     $result = $query->execute() or die($connection->error);
     // print($result);
     $array = $query->get_result();
@@ -33,6 +37,7 @@ if (isset($_POST["user_indentifier"], $_POST["password"])) {
     $hasValidCredentials  = [];
     if ($array->num_rows > 0) {
         $hasValidCredentials[]  = $array->fetch_assoc();
+       
         // print_r($hasValidCredentials);
     }
 
@@ -76,8 +81,6 @@ if (isset($_POST["user_indentifier"], $_POST["password"])) {
         );
         $response = $common->getRepsonse(1, $user_data, "logged in");
     }
-} else {
-    $response = $common->getRepsonse(0, null, "empty fields");
 }
 
 echo json_encode($response);?>
