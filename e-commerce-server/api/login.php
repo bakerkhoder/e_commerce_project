@@ -24,11 +24,11 @@ if (!isset($_POST["user_indentifier"], $_POST["password"])) {
 
     $hashedpass = hash('sha256', $password) . 'team1';
           
-    // $hashedpass = $password; i have to ADD THE PASSWORD TO the query after fixing  a bug
+    // $hashedpass = $password; 
     $query = $connection->prepare(
-        "SELECT * FROM users where username = ? or email = ?"
+        "SELECT * FROM users where username = ? or email = ? and password = ?"
     );
-    $query->bind_param('ss', $user_indentifier, $user_indentifier);
+    $query->bind_param('sss', $user_indentifier, $user_indentifier, $hashedpass);
     $result = $query->execute() or die($connection->error);
     // print($result);
     $array = $query->get_result();
