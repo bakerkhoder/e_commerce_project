@@ -8,6 +8,7 @@ header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorizatio
 $common = new Common();
 
 if (!isset($_POST['id'])) {
+  
     $response = $common->getRepsonse(0, null, "no id is given");
 } else {
     $id = $_POST['id'];
@@ -23,12 +24,14 @@ if (!isset($_POST['id'])) {
                                                         FROM users AS u, favorite_products AS fp
                                                         WHERE u.id=? AND u.id=fp.client_id)
                                     AND p.is_deleted = 0');
+                                
     $query->bind_param('iii', $id, $id, $id);
     $query->execute();
+ 
     $array = $query->get_result();
 
     $response = [];
-    echo "shaw";
+
 
     if ($array->num_rows > 0) {
         while ($a = $array->fetch_assoc()) {

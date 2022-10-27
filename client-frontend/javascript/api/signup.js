@@ -17,7 +17,7 @@ const password_conf_message = document.querySelector('#input-password-confirm')
 
 const success_message = document.querySelector('.success-message')
 const error_message = document.querySelector('.error-message')
-console.log("oooo")
+
 function removeErrorMessages(parent) {
   const inputs = Array.from(parent.querySelectorAll('.input'))
 
@@ -28,8 +28,6 @@ function removeErrorMessages(parent) {
       errors[i].textContent = ''
     })
   }
-
-  console.log(inputs)
 }
 
 removeErrorMessages(login_form)

@@ -20,7 +20,7 @@ if (isset($_GET['id'])) {
     $result = $stmt->get_result();
     $response = array();
     if ($result) {
-        echo "e";
+        
         if ($result->num_rows > 0) {
             //data found
             $data = [];

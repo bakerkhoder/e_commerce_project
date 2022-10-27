@@ -23,6 +23,7 @@ const authSubmitBtn = document.getElementById("login");
         usernameInput.value = "";
         passwordInput.value = "";
        } else {
+        console.log(response.data)
         const localStorageData = [];
         localStorageData.push(response.data.data.user_id);
         localStorageData.push(response.data.data.username);

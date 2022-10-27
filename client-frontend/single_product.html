@@ -1,0 +1,96 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/logo.png" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="https://kit.fontawesome.com/f95bd4b1c8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- START Nav bar section -->
+    <nav>
+        <input type="checkbox" name="" id="checkbox_burger_menu">
+        <div class="logo"><a href="./client_homepage.html"><img src="./assets/images/logo.png"></a></div>
+
+        <ul id="burger-menu-ul">
+            <li id="edit-profile-icon"><a href="#"><i class="fa-solid fa-user"></i></a></li>
+            <li><a href="./client_saved_items.html"><i class="fa-regular fa-heart"></i></a></li>
+            <li><a href="./checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li><a href="#" id="logout"><i class="fa-solid fa-sign-out"></i></a></li>
+        </ul>
+
+        <div class="menu">
+            <label for="checkbox_burger_menu">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+        </div>
+    </nav>
+    <!-- END Nav bar section -->
+
+
+    <!-- START product  -->
+    <div class="single-product">
+
+    </div>
+    <!-- END product  -->
+
+    <!-- ! START Edit profile Modal -->
+    <div class="modal-bg">
+        <div class="modal">
+            <span class="modal-close">X</span>
+            <div class="input-fields">
+                <h2>Edit Profile</h2>
+                <!-- Name -->
+                <label for="name">Name</label>
+                <input id="profile-input-name" type="text" name="name">
+                <!-- Username -->
+                <label for="username">Username</label>
+                <input id="profile-input-username" type="text" name="username">
+                <!-- Email -->
+                <label for="email">Email</label>
+                <input id="profile-input-email" type="text" name="email">
+                <!-- Save changes button -->
+                <button class="edit_profile_modal_save_btn">Save changes</button>
+            </div>
+        </div>
+    </div>
+    <!--! END Edit Profile Modal -->
+
+    <div id="alert">
+        <div class="confirmation-popup-container">
+            <div class="confirmation_alert">
+                <div class="title_confirmation_alert">
+                    <img class="red-alert-icon" src="./assets/images/alert_icon_red.png">
+                    <p>Confirm dialog</p>
+                </div>
+                <hr>
+                <div class="confirmation_alert_description">
+                    <p id="text-alert"> Are You sure you want to delete?</p>
+                </div>
+                <!-- <div class="confirmation_alert_btns">
+                    <button class="green" id="confirm-conf-popup">Confirm</button>
+                    <button class="red" id="cancel-conf-popup">Cancel</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- START footer -->
+    <footer>
+        <p>Copyright &copy; 2022 CONQUER</p>
+    </footer>
+    <!-- END footer -->
+    <script src="./javascript/api/auth.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./javascript/alert_msg.js"></script>
+    <script src="./javascript/api/common.js"></script>
+    <script src="./javascript/api/single_product.js"></script>
+    <script src="./javascript/script.js"></script>
+    <script src="./javascript/api/add_to_cart.js"></script>
+</body>
+
+</html>
