@@ -1,0 +1,176 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="icon" type="image/x-icon" href="./images/logo.png" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="https://kit.fontawesome.com/f95bd4b1c8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- START Nav bar section -->
+    <nav>
+        <input type="checkbox" name="" id="checkbox_burger_menu">
+        <div class="logo"><a href="./client_homepage.html"><img src="./assets/images/logo.png"></a></div>
+        <ul id="burger-menu-ul">
+            <li id="edit-profile-icon"><a href="#"><i class="fa-solid fa-user"></i></a></li>
+            <li><a href="./client_saved_items.html"><i class="fa-regular fa-heart"></i></a></li>
+            <li><a href="./checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li><a href="#" id="logout"><i class="fa-solid fa-sign-out"></i></a></li>
+        </ul>
+
+        <div class="menu">
+            <label for="checkbox_burger_menu">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+        </div>
+    </nav>
+    <!-- END Nav bar section -->
+
+    <!-- START page title -->
+    <div class="pagetitle">
+        <h1>PRODUCTS</h1>
+    </div>
+    <!-- END page title -->
+
+    <!-- START Products section -->
+    <!-- To append to the below class in js when adding products -->
+    <div class="checkout-container">
+        <!-- The below div will contain the products added to card -->
+
+        <div class="empty-cart hidden">
+
+            <p>Cart is empty</p>
+            <a href="./client_homepage.html">Add Products</a>
+        </div>
+        <div class="card-checkout hidden">
+
+            <div class="pagetitle">
+                <h1>MY BAG</h1>
+            </div>
+
+
+            <!-- ! START another card item used for testing -->
+            <div class="saved-product">
+                <div class="saved-product-img">
+                    <img src="./assets/images/dummy_product_pic.jpg">
+                </div>
+                <div class="saved-product-details">
+                    <h3>Title</h3>
+                    <p class="description"> product description product description product description</p>
+
+                    <div class="price-quantity">
+                        <h6>$<span class="product_price">1000</span></h6>
+                        <div class="quantity">
+                            <label for="quantity">Qty</label>
+                            <input type="number" name="quantity">
+                        </div>
+                    </div>
+
+                    <button class="save-changes-checkout">Save</button>
+                </div>
+            </div>
+            <!-- ! END another card item used for testing -->
+
+
+        </div>
+
+        <!-- Checkout div -->
+        <div class="checkout hidden">
+            <div class="pagetitle">
+                <h1> CHECKOUT</h1>
+            </div>
+            <div class="checkout-card">
+                <div class="checkout-discount">
+                    <input type="text" placeholder="Discount code">
+                    <button>Apply</button>
+                </div>
+                <div class="checkout-total">
+
+                </div>
+                <div class="checkout-subtotal">
+
+                </div>
+                <div class="checkout-delivery">
+                    <p>Delivery</p>
+                    <p>Free</p>
+                </div>
+                <div class="checkout-button">
+                    <button class="confirmation-popup-active">Checkout</button>
+                </div>
+                <div class="payment-mthds">
+                    <p>We accept</p>
+                    <div class="payment-icons">
+                        <i class="fa-brands fa-cc-mastercard"></i>
+                        <i class="fa-brands fa-cc-paypal"></i>
+                        <i class="fa-brands fa-cc-visa"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- START confirmation popup for checkout -->
+    <div id="alert">
+        <div class="confirmation-popup-container">
+            <div class="confirmation_alert">
+                <div class="title_confirmation_alert">
+                    <img class="red-alert-icon" src="./assets/images/alert_icon_red.png">
+                    <p>Confirm dialog</p>
+                </div>
+                <hr>
+                <div class="confirmation_alert_description">
+                    <p> Please confirm your order</p>
+                </div>
+                <div class="confirmation_alert_btns">
+                    <button class="green-popup" id="confirm-conf-popup">Confirm</button>
+                    <button class="red" id="cancel-conf-popup">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END confirmation popup for checkout -->
+
+
+
+
+    <!-- ! START Edit profile Modal -->
+    <div class="modal-bg">
+        <div class="modal">
+            <span class="modal-close">X</span>
+            <div class="input-fields">
+                <h2>Edit Profile</h2>
+                <!-- Name -->
+                <label for="name">Name</label>
+                <input id="profile-input-name" type="text" name="name">
+                <!-- Username -->
+                <label for="username">Username</label>
+                <input id="profile-input-username" type="text" name="username">
+                <!-- Email -->
+                <label for="email">Email</label>
+                <input id="profile-input-email" type="text" name="email">
+                <!-- Save changes button -->
+                <button class="edit_profile_modal_save_btn">Save changes</button>
+            </div>
+        </div>
+    </div>
+    <!--! END Edit Profile Modal -->
+
+    <!-- START footer -->
+    <!-- <footer>
+        <p>Copyright &copy; 2022 CONQUER</p>
+    </footer> -->
+    <!-- END footer -->
+    <script src="./javascript/api/auth.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./javascript/api/cart.js"></script>
+    <script src="./javascript/checkout.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./javascript/products_script.js"></script>
+
+
+</body>
+
+</html>
