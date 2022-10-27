@@ -5,9 +5,9 @@ $common = new Common();
 
 $response = array();
 
-if (isset($_GET['id'])) {
+if (isset($_POST['id'])) {
 
-    $client_id = $_GET['id'];
+    $client_id = $_POST['id'];
 
     $sql = 'select products.*, cart_items.quantity from products 
     inner join cart_items on products.id = cart_items.product_id

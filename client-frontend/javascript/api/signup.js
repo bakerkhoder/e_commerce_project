@@ -128,7 +128,7 @@ const signup = async (data) => {
 
   console.log(response.data)
 
-  if (response.data.status) {
+  if ((response.data.status)) {
     //success
 
     error_message.classList.add('hide')
@@ -138,6 +138,7 @@ const signup = async (data) => {
     success_message.textContent = response.data.message
 
     setTimeout(function () {
+      console.log("done")
       window.location.href = './index.html'
     }, 800)
   } else {

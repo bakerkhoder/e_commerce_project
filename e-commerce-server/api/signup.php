@@ -19,7 +19,8 @@ if (
     $false_flag = 0;
 
     $hashed_password = hash('sha256', $_POST['password']) . 'team1';
-     echo $hashed_password;    //check if username or email exist
+
+    //check if username or email exist
 
     if ($common->emailAndUsernameExist($username, $email)) {
         $response = $common->getRepsonse(0, null, 'Username/Email already existed!');
