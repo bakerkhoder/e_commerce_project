@@ -11,7 +11,7 @@ function createCard(title, description, price, image, id) {
   })
 
   let newElement = document.createElement('img')
-  newElement.src = '../seller-frontend/assets/images/products/' + image
+  newElement.src = '../seller-frontend/assets/images/' + image
   newCard.appendChild(newElement)
 
   newElement = document.createElement('h3')
