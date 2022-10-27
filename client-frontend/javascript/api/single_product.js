@@ -73,15 +73,26 @@ function createProduct(title, price, seller, description, image) {
   buttonElement.classList.add('add-to-cart')
   buttonElement.textContent = 'Add to cart'
 
+
+
   buttonElement.addEventListener('click', async () => {
-    const response = await axios.get(
-      'http://localhost/e-commerce/ecommerce-server/api/add_items_to_cart.php?client_id=' +
-        clientId +
-        '&product_id=' +
-        currentId
-    )
-    const res = response.data
-    if (res.status) {
+
+
+    const data= new FormData()
+    data.append('client_id',clientId)
+    data.append("product_id",currentId)
+
+     axios({
+    method: "post",
+    url: "http://localhost/e-commerce-project/e-commerce-server/api/add_items_tocart.php",
+    data,
+    headers: { "Content-Type": "multipart/form-data" },
+  })
+    .then(function (response) {
+      //handle success
+   
+     const res = response.data
+     if (res.status) {
       triggerAlert(res.message)
       setTimeout(function () {
         window.location.href = './checkout.html'
@@ -92,6 +103,35 @@ function createProduct(title, price, seller, description, image) {
         window.location.reload()
       }, 1500)
     }
+      
+      }
+    )
+    .catch(function (response) {
+      //handle error
+      console.log(error)
+    })
+
+
+
+
+    // const response = await axios.get(
+    //   'http://localhost/e-commerce-project\e-commerce-server\api\add_items_tocart.php?client_id=' +
+    //     clientId +
+    //     '&product_id=' +
+    //     currentId
+    // )
+    // const res = response.data
+    // if (res.status) {
+    //   triggerAlert(res.message)
+    //   setTimeout(function () {
+    //     window.location.href = './checkout.html'
+    //   }, 1500)
+    // } else {
+    //   triggerAlert(res.message)
+    //   setTimeout(function () {
+    //     window.location.reload()
+    //   }, 1500)
+    // }
   })
   newElement.appendChild(buttonElement)
   buttonElement = document.createElement('button')
