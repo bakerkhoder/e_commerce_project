@@ -1,5 +1,4 @@
 const currentId = sessionStorage.getItem('currentProduct')
-
 const clientId = JSON.parse(localStorage.getItem('auth'))[0]
 
 getProductInfo(currentId)
@@ -9,12 +8,37 @@ if (performance.getEntriesByType('navigation')[0].type == 'navigate') {
 }
 
 async function getProductInfo(id) {
-  const response = await axios.get(
-    'http://localhost/e-commerce/ecommerce-server/api/get_product_byid.php?id=' +
-      id
-  )
-  const data = response.data.data[0]
-  createProduct(data.title, data.price, data.name, data.description, data.image)
+
+
+   const data= new FormData()
+    data.append('id',id)
+  axios({
+    method: "post",
+    url: "http://localhost/e-commerce-project/e-commerce-server/api/get_product_byid.php",
+ data,
+    headers: { "Content-Type": "multipart/form-data" },
+  })
+    .then(function (response) {
+      //handle success
+   
+      const data=response.data.data[0]
+      createProduct(data.title,data.price, data.name, data.description,data.image) 
+      
+      }
+    )
+    .catch(function (response) {
+      //handle error
+      console.log(error)
+    })
+
+
+    
+//   const response = await axios.get(
+//     'http://localhost/e-commerce/ecommerce-server/api/get_product_byid.php?id=' +
+//       id
+//   )
+//   const data = response.data.data[0]
+//   createProduct(data.title, data.price, data.name, data.description, data.image)
 }
 
 function createProduct(title, price, seller, description, image) {
