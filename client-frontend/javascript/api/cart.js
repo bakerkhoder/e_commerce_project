@@ -123,4 +123,4 @@ const id=JSON.parse(localStorage.getItem('auth'))[0]
 //   }
 // }
 
-getCartItems()
+// getCartItems()

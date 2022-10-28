@@ -8,7 +8,6 @@ header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorizatio
 if (isset($_POST['client_id'])) {
 
     $client_id=$_POST['client_id'];
-    
     $sql_query = "
     SELECT users.name client_name, users.username client_username, users.email
     FROM users
