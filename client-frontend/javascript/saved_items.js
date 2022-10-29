@@ -1,8 +1,3 @@
-//For the carousel in the products page
-const slidesContainer = document.getElementById("slides-container");
-const slide = document.querySelector(".slide");
-const prevButton = document.getElementById("slide-arrow-prev");
-const nextButton = document.getElementById("slide-arrow-next");
 //Edit profile modal
 const modalBtn = document.getElementById('edit-profile-icon');
 const modalBg = document.querySelector('.modal-bg');
@@ -12,21 +7,10 @@ const client_name_input = document.getElementById('profile-input-name');
 const client_username_input = document.getElementById('profile-input-username');
 const client_email_input = document.getElementById('profile-input-email');
 
-const user_in_storage =JSON.parse(localStorage.getItem('auth'));
-const client_id=user_in_storage[0];
+const user_in_storage =JSON.parse(localStorage.getItem('auth'))[0];
+const client_id=user_in_storage;
 console.log(client_id);
 
-
-//For the Carousel
-nextButton.addEventListener("click", () => {
-    const slideWidth = slide.clientWidth;
-    slidesContainer.scrollLeft += slideWidth;
-});
-
-prevButton.addEventListener("click", () => {
-    const slideWidth = slide.clientWidth;
-    slidesContainer.scrollLeft -= slideWidth;
-});
 
 //When the button that should show the modal is clicked
 modalBtn.addEventListener('click', function () {
@@ -86,8 +70,6 @@ async function getProfile() {
       //handle error
       console.log(error)
     })}
-
-
 
 
 getProfile()

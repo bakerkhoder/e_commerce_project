@@ -6,9 +6,9 @@ header('Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE');
 header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorization, X-Request-With');
 //PHP to get a client's favorite products
 
-if (isset($_GET['client_id'])) {
+if (isset($_POST['client_id'])) {
 
-    $client_id=$_GET['client_id'];
+    $client_id=$_POST['client_id'];
     
     $sql_query = "
     SELECT products.id, products.title, products.image, products.description, products.price

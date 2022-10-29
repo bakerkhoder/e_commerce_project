@@ -1,1 +1,3 @@
-tt
+add home page navigation
+whishlist
+remove from favorites
