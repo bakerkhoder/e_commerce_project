@@ -1,10 +1,15 @@
 <?php 
+
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE');
+header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorization, X-Request-With');
     include('connection.php');
     include('common.php');
     $common = new Common();
 
     if(!isset($_POST['product_id'])){
         $response = $common->getRepsonse(0, null, 'no product id is sent');
+       
         echo json_encode($response);
     }else{
         $product_id = $_POST['product_id'];

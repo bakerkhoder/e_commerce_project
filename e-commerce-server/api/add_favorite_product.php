@@ -5,10 +5,10 @@ include_once "common.php";
 $common = new common();
 $response = [];
 if (
-    isset($_GET["client_id"], $_GET["product_id"])
+    isset($_POST["client_id"], $_POST["product_id"])
 ) {
-    $client_id = $_GET["client_id"];
-    $product_id = $_GET["product_id"];
+    $client_id = $_POST["client_id"];
+    $product_id = $_POST["product_id"];
     if ($common->checkUserWithType($client_id, 'client')) {
         if ($common->checkProduct($product_id)) {
             if ($common->checkProductInFav($product_id, $client_id) == 0) {

@@ -1,6 +1,6 @@
 const currentId = sessionStorage.getItem('currentProduct')
 const clientId = JSON.parse(localStorage.getItem('auth'))[0]
-
+console.log(currentId)
 getProductInfo(currentId)
 
 if (performance.getEntriesByType('navigation')[0].type == 'navigate') {
@@ -139,13 +139,22 @@ function createProduct(title, price, seller, description, image) {
   buttonElement.classList.add('white-back')
   buttonElement.textContent = 'Add to favorites'
   buttonElement.addEventListener('click', async () => {
-    const response = await axios.get(
-      'http://localhost/e-commerce/ecommerce-server/api/add_to_favorites.php?client_id=' +
-        clientId +
-        '&product_id=' +
-        currentId
-    )
-    const res = response.data
+
+
+
+
+    const data= new FormData()
+    data.append('client_id',clientId)
+    data.append('product_id',currentId)
+  axios({
+    method: "post",
+    url: "http://localhost/e-commerce-project/e-commerce-server/api/add_favorite_product.php",
+ data,
+    headers: { "Content-Type": "multipart/form-data" },
+  })
+    .then(function (response) {
+      //handle success
+       const res = response.data
     if (res.status) {
       triggerAlert(res.message)
       setTimeout(function () {
@@ -157,6 +166,13 @@ function createProduct(title, price, seller, description, image) {
         window.location.reload()
       }, 1500)
     }
+      }
+    )
+    .catch(function (response) {
+      //handle error
+      console.log(error)
+    })
+
   })
   newElement.appendChild(buttonElement)
   left.appendChild(newElement)

@@ -42,7 +42,7 @@ async function addViewers(id) {
   const data = new FormData()
   data.append('product_id', id)
   const response = await axios.post(
-    'http://localhost/e-commerce/ecommerce-server/api/increment_views.php',
+    'http://localhost/e-commerce-project/e-commerce-server/api/increment_product_views.php',
     data
   )
 }

@@ -32,6 +32,7 @@ if (!isset($_POST["user_indentifier"], $_POST["password"])) {
     $result = $query->execute() or die($connection->error);
     // print($result);
     $array = $query->get_result();
+    
 
     // die('ff' . $array->num_rows);
     $hasValidCredentials  = [];
