@@ -1,0 +1,299 @@
+/* CSS reset */
+/* * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} */
+
+.background {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(20, 20, 27, 0.2);
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    /* visibility: hidden; */
+    z-index: 1;
+    overflow: hidden;
+    display: none;
+    transition: 0.5s;
+}
+
+.add-form {
+    background-color: white;
+    width: 550px;
+    min-height: 450px;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    align-self: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+}
+
+.close {
+    position: absolute;
+    font-size: 20px;
+    cursor: pointer;
+    top: 10px;
+    right: 15px;
+}
+
+.add-form>h1 {
+    padding-bottom: 20px;
+    color: #323246;
+    font-size: 30px;
+}
+
+.add-form>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-form>div>div {
+    width: 60%;
+}
+
+.column-direction {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.add-form>div>div:last-child {
+    width: 37%;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 13px;
+}
+
+.add-form>div>div>div {
+    margin-bottom: 13px;
+    width: 100%;
+}
+
+input,
+textarea,
+select {
+    width: 99%;
+    border-radius: 15px;
+    height: 40px;
+    border: 1px solid black;
+    padding: 0 10px;
+    font-size: 18px;
+}
+
+textarea {
+    height: 80px;
+}
+
+.column-direction+span {
+    color: #808080;
+}
+
+.profile-picture {
+    width: 190px;
+    height: 190px;
+    border-radius: 200px;
+}
+
+.buttons {
+    border-radius: 15px;
+    border: 0;
+    padding: 12px 13px;
+    color: white;
+    cursor: pointer;
+}
+
+.green-background {
+    margin-top: 13px;
+    background-color: #323246;
+    font-size: 15px;
+    padding: 12px 16px;
+    /* width: 200px; */
+    align-self: center;
+}
+
+.other-background {
+    background-color: #64c5b1;
+    font-size: 23px;
+}
+
+input[type='file'] {
+    display: none;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    text-align: left;
+}
+
+#file-input-text {
+    color: white;
+}
+
+#edit-file-input-text {
+    color: white;
+}
+
+/*alertt*/
+
+/* Confirmation modal */
+
+.confirmation_alert {
+    border: none;
+    width: 350px;
+    height: fit-content;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
+    position: relative;
+}
+
+.confirmation-popup-container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+}
+
+.title_confirmation_alert img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.title_confirmation_alert {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.title_confirmation_alert p {
+    color: #de3030;
+    font-weight: 500;
+}
+
+.confirmation_alert hr {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.confirmation_alert_description {
+    font-size: 15px;
+    /* margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 30px; */
+    padding: 20px 10px;
+}
+
+.confirmation_alert_btns button {
+    width: 40%;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 6px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.confirmation_alert_btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.red {
+    border: 2px solid #de3030;
+    color: #de3030;
+}
+
+.red:hover {
+    background-color: rgba(222, 48, 48, 0.5);
+    border: none;
+}
+
+.green:hover {
+    background-color: rgba(5, 113, 5, 0.5);
+    border: none;
+}
+
+.green {
+    border: 2px solid rgb(5, 113, 5);
+    color: rgb(5, 113, 5);
+}
+
+/* .confirmation-popup-active {
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 70px;
+} */
+
+.bg-active {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Success message after confirmation */
+.success {
+    width: 20%;
+    height: 60px;
+    align-self: center;
+    /* margin-top: 7px;
+  margin-bottom: 7px;
+  margin-left: 50px; */
+}
+
+.success_msg {
+    color: rgb(5, 113, 5);
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.error_msg {
+    color: #de3030;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.sucess-msg-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ok-btn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#text-alert {
+    text-align: center;
+}
+
+.special {
+    justify-content: center !important;
+}
+
+.special>img {
+    margin-bottom: 10px;
+}

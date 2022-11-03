@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/list.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Dasboard Menu</title>
+</head>
+
+<body>
+    <section class="body-part">
+        <div class="top-bar">
+            <div class="right">
+                <span><img class="header-icon" src="../images/svg/amaze-svgrepo-com.svg"></span>
+                <span id="nav-title">Sellers</span>
+            </div>
+            <button id="add-button" class="btn btn-head"><img src="../images/svg/add-svgrepo-com.svg">Add
+                seller</button>
+        </div>
+        <table class="sellers-table">
+            <thead>
+                <tr>
+                    <th>NAME</th>
+                    <th>USERNAME</th>
+                    <th>EMAIL</th>
+                    <th>ACTION</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <!-- <tr>
+                    <td>Mohammad Kassem</td>
+                    <td>mohamadkassemm</td>
+                    <td class="actions">
+                        <a href="javascript:void(0);" class="edit-icon"><img
+                                src='../images/svg/edit-svgrepo-com.svg'></a>
+                        <a href="javascript:void(0);" class="delete-icon confirmation-popup-active"><img
+                                src='../images/svg/delete-svgrepo-com.svg'></a>
+                    </td>
+                    </tr> -->
+            </tbody>
+
+
+        </table>
+    </section>
+
+    <section class="background" id="add-popup">
+        <div class="add-form addd">
+            <span class="close" id="add-close">X</span>
+            <h1>Add Seller</h1>
+
+            <div>
+                <div>
+                    <div class="column-direction">
+                        <span>Name:</span>
+                        <input id="name-input" type="text">
+                        <span class="error" id="name-error"></span>
+                    </div>
+                    <div class="column-direction">
+                        <span>Username:</span>
+                        <input id="username-input" type="text">
+                        <span class="error" id="username-error"></span>
+                    </div>
+                    <div class="column-direction">
+                        <span>Password:</span>
+                        <input id="password-input" type="password">
+                        <span class="error" id="password-error"></span>
+                    </div>
+                    <div class="column-direction">
+                        <span>Email:</span>
+                        <input id="email-input" type="text">
+                        <span class="error" id="email-error"></span>
+                    </div>
+                </div>
+                <div class="column-direction">
+                    <img id="image-element" class="profile-picture" src="../images/svg/no-profile.svg" alt="">
+                    <label class="buttons green-background">
+                        <span id="file-input-text" class="file-input-text">Add profile picture</span>
+                        <input type="file" accept=".jpg, .png, .svg" id="image" />
+                    </label>
+                </div>
+            </div>
+            <button class="buttons other-background add-btnn">ADD SELLER</button>
+        </div>
+    </section>
+
+    <section class="background" data-id="" id="edit-popup">
+
+        <div class="add-form editt">
+            <span class="close" id="edit-close">X</span>
+            <h1>SELLER INFO</h1>
+            <div>
+                <div>
+                    <div class="column-direction">
+                        <span>Name:</span>
+                        <input id="edit-name-input" type="text">
+                        <span class="error" id="edit-name-error"></span>
+                    </div>
+                    <div class="column-direction">
+                        <span>Username:</span>
+                        <input id="edit-username-input" type="text">
+                        <span class="error" id="edit-username-error"></span>
+                    </div>
+                    <!-- <div class="column-direction">
+                        <span>Password:</span>
+                        <input id="edit-password-input" type="password">
+                        <span class="error" id="edit-password-error"></span>
+                    </div> -->
+                    <div class="column-direction">
+                        <span>Email:</span>
+                        <input id="edit-email-input" type="text">
+                        <span class="error" id="edit-email-error"></span>
+                    </div>
+                </div>
+                <div class="column-direction">
+                    <img id="edit-image-element" class="profile-picture" src="../images/svg/no-profile.svg" alt="">
+                    <label class="buttons green-background">
+                        <span id="edit-file-input-text" class="file-input-text">Edit profile picture</span>
+                        <input type="file" accept=".jpg, .png, .svg" id="image-edit" />
+                    </label>
+                </div>
+            </div>
+            <button class="buttons other-background edit-btnn">EDIT SELLER</button>
+        </div>
+    </section>
+
+    <div id="alert">
+        <div class="confirmation-popup-container">
+            <div class="confirmation_alert">
+                <div class="title_confirmation_alert">
+                    <img class="red-alert-icon" src="../images/png/alert_icon_red.png">
+                    <p>Confirm dialog</p>
+                </div>
+                <hr>
+                <div class="confirmation_alert_description">
+                    <p id="text-alert"> Are You sure you want to delete?</p>
+                </div>
+                <div class="confirmation_alert_btns">
+                    <button class="green" id="confirm-conf-popup">Confirm</button>
+                    <button class="red" id="cancel-conf-popup">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="confirmation-popup-container-ok">
+        <div class="confirmation_alert">
+            <div class="confirmation_alert_description">
+                <p id="msg"></p>
+            </div>
+            <div class="confirmation_alert_btns ok-btn">
+                <button class="green" id="confirm-conf-popup-ok">OK</button>
+            </div>
+        </div>
+    </div> -->
+    <script src="../javascript/seller_list.js"></script>
+    <script src="../javascript/alert_msgs.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../javascript/validate_inputs.js"></script>
+    <script src="../javascript/api/list_seller_api.js"></script>
+    <script src="../javascript/api/add_seller.js"></script>
+    <script src="../javascript/api/edit_seller.js"></script>
+</body>
+
+</html>

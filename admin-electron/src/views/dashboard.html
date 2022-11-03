@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <title>Dasboard Menu</title>
+</head>
+
+<body>
+    <!-- start of dashboard menu -->
+    <section class="sidebar">
+        <a href="dashboard.html" class="logo"><img src="../images/png/logo2.png" alt=""></a>
+        <div class="account-profile">
+            <img src="../images/svg/no-profile.svg" alt="">
+            <div class="account-details">
+                <span class="account-name">Asmaa Hamid</span>
+                <span class="account-username">@asmaahamid</span>
+            </div>
+        </div>
+        <ul class="sidebar--items">
+            <li class="sidebar-item active" data-page="statistics.html" data-title="Statistics"><a href=""><img
+                        src="../images/svg/dashboard-svgrepo-com.svg">Dashboard</a>
+            </li>
+            <li class="sidebar-item" data-page="clients_list.html" data-title=" Customers"><a href=""><img
+                        src="../images/svg/users-svgrepo-com.svg">Customers</a></li>
+            <li class="sidebar-item" data-page="seller_list.html" data-title="sellers"><a href=""><img
+                        src="../images/svg/seller-svgrepo-com.svg">Sellers</a></li>
+        </ul>
+    </section>
+    <!--end of dashboard menu -->
+    <section class="section2">
+        <iframe id="frame" src="statistics.html" frameborder="0"></iframe>
+    </section>
+    <!-- <section class="background">
+        <div class="add-form">
+            <span id="close">X</span>
+            <h1>SELLER INFO</h1>
+            <div>
+                <div>
+                    <div class="column-direction">
+                        <span>Name:<span class="error" id="name-error"></span></span>
+                        <input class="info-field" id="name-input" type="text">
+                    </div>
+                    <div class="column-direction">
+                        <span>Username:<span class="error" id="username-error"></span></span>
+                        <input class="info-field" id="username-input" type="text">
+                    </div>
+                    <div class="column-direction">
+                        <span>Password:<span class="error" id="password-error"></span></span>
+                        <input class="info-field" id="password-input" type="password">
+                    </div>
+                    <div class="column-direction">
+                        <span>Email:<span class="error" id="email-error"></span></span>
+                        <input class="info-field" id="email-input" type="text">
+                    </div>
+                </div>
+                <div class="column-direction">
+                    <img id="image-element" class="profile-picture" src="../images/svg/no-profile.svg" alt="">
+                    <label class="buttons green-background">
+                        <span id="file-input-text">Edit profile picture</span>
+                        <input type="file" accept=".jpg, .png, .svg" id="image" />
+                    </label>
+                </div>
+
+                <div class="column-direction">
+                    <span>Email:<span class="error" id="email-error"></span></span>
+                    <input id="email-input" type="text">
+                </div>
+            </div>
+            <div class="column-direction">
+                <img id="image-element" class="profile-picture" src="../images/svg/no-profile.svg" alt="">
+                <label class="buttons green-background">
+                    Edit profile picture
+                    <input type="file" accept=".jpg, .png, .svg" id="image" />
+                </label>
+            </div>
+            <button class="buttons other-background">EDIT SELLER</button>
+        </div>
+    </section> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- <script src="../javascript/api/add_seller.js"></script> -->
+    <script src="../javascript/dashboard.js" type="text/javascript"></script>
+</body>
+
+</html>
