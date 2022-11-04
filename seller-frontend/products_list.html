@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../admin-electron/src/css/reset.css">
+    <link rel="stylesheet" href="../admin-electron/src/css/list.css">
+    <link rel="stylesheet" href="../admin-electron/src/css/styles.css">
+    <title>CONQUR | Products</title>
+</head>
+
+<body>
+    <section class="body-part">
+        <div class="top-bar">
+            <div class="right">
+                <span><img class="header-icon" src="../admin-electron/src/images/svg/amaze-svgrepo-com.svg"></span>
+                <span id="nav-title">Products</span>
+            </div>
+            <button id="add-button" class="btn btn-head"><img
+                    src="../admin-electron/src/images/svg/add-svgrepo-com.svg">Add
+                Product</button>
+        </div>
+        <table class="sellers-table">
+            <thead>
+                <tr>
+                    <th>TITLE</th>
+                    <th>CATEGORY</th>
+                    <th>PRICE</th>
+                    <th>QUANTITY</th>
+                    <th>VIEWS</th>
+                    <th>ACTIONS</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+
+            </tbody>
+
+
+        </table>
+    </section>
+
+    <section class="background" id="add-popup">
+        <div class="add-form addd">
+            <span class="close" id="add-close">X</span>
+            <h1>Add Product</h1>
+
+            <div>
+                <div>
+                    <div class="column-direction">
+                        <span>Category:</span>
+                        <select name="category" id="category"></select>
+                    </div>
+                    <div class="column-direction">
+                        <span>Title:</span>
+                        <input id="name-input" type="text">
+                        <span class="error" id="name-error"></span>
+                    </div>
+                    <div class="column-direction">
+                        <span>Price:</span>
+                        <input id="username-input" type="text">
+                        <span class="error" id="username-error"></span>
+                    </div>
+                    <div class="column-direction">
+                        <span>Quantity:</span>
+                        <input id="password-input" type="text">
+                        <span class="error" id="password-error"></span>
+                    </div>
+                    <div class="column-direction">
+                        <span>Description:</span>
+                        <textarea id="email-input" rows="5"></textarea>
+                        <span class="error" id="email-error"></span>
+                    </div>
+                </div>
+                <div class="column-direction special">
+                    <img style="border-radius:5px" id="image-element" class="profile-picture"
+                        src="./assets/images/blanck.png" alt="">
+                    <label class="buttons green-background">
+                        <span id="file-input-text" class="file-input-text">Add picture</span>
+                        <input type="file" accept=".jpg, .png, .svg" id="image" />
+                    </label>
+                </div>
+            </div>
+            <button class="buttons other-background add-btnn">ADD PRODUCT</button>
+        </div>
+    </section>
+
+    <section class="background" data-id="" id="edit-popup">
+
+        <div class="add-form editt">
+            <span class="close" id="edit-close">X</span>
+            <h1>Product Info</h1>
+            <div>
+                <div>
+                    <div class="column-direction">
+                        <span>Category:</span>
+                        <select name="category" id="edit-category"></select>
+                    </div>
+                    <div class="column-direction">
+                        <span>Title:</span>
+                        <input id="edit-name-input" type="text">
+                        <span class="error" id="edit-name-error"></span>
+                    </div>
+                    <div class="column-direction">
+                        <span>Price:</span>
+                        <input id="edit-username-input" type="text">
+                        <span class="error" id="edit-username-error"></span>
+                    </div>
+                    <div class="column-direction">
+                        <span>Quantity:</span>
+                        <input id="edit-password-input" type="text">
+                        <span class="error" id="edit-password-error"></span>
+                    </div>
+                    <div class="column-direction">
+                        <span>Description:</span>
+                        <textarea id="edit-email-input" rows="5"></textarea>
+                        <span class="error" id="edit-email-error"></span>
+                    </div>
+                </div>
+                <div class="column-direction">
+                    <img style="border-radius:5px" id="edit-image-element" class="profile-picture"
+                        src="../images/svg/no-profile.svg" alt="">
+                    <label class="buttons green-background">
+                        <span id="edit-file-input-text" class="file-input-text">Edit picture</span>
+                        <input type="file" accept=".jpg, .png, .svg" id="image-edit" />
+                    </label>
+                </div>
+            </div>
+            <button class="buttons other-background edit-btnn">EDIT PRODUCT</button>
+        </div>
+    </section>
+
+    <div id="alert">
+        <div class="confirmation-popup-container">
+            <div class="confirmation_alert">
+                <div class="title_confirmation_alert">
+                    <img class="red-alert-icon" src="./assets/images/alert_icon_red.png">
+                    <p>Confirm dialog</p>
+                </div>
+                <hr>
+                <div class="confirmation_alert_description">
+                    <p id="text-alert"> Are You sure you want to delete?</p>
+                </div>
+                <div class="confirmation_alert_btns">
+                    <button class="green" id="confirm-conf-popup">Confirm</button>
+                    <button class="red" id="cancel-conf-popup">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/javascript/products.js"></script>
+    <script src="./assets/javascript/alert_msgs.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./assets/javascript/validate_inputs.js"></script>
+    <script src="./assets/javascript/api/products_list.js"></script>
+    <script src="./assets/javascript/api/add_product.js"></script>
+    <script src="./assets/javascript/api/edit_product.js"></script>
+</body>
+
+</html>
