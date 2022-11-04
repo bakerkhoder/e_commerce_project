@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/statistics.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    
+
+    <div class="container">
+        <div class="top-bar">
+            <div class="right">
+                <span><img class="header-icon" src="../images/svg/amaze-svgrepo-com.svg"></span>
+                <span id="nav-title">Statistics</span>
+            </div>
+        </div>
+        <div class="best-statistics">
+            <div class="best-user">
+                <div class="best--header">
+                    <div class="title">
+                        <img class="title-icon" src="../images/svg/reward.svg" alt="">
+                        <h3 class="header--title">Best Seller</h3>
+                    </div>
+                    <select class="duration">
+                        <option>Weekly</option>
+                        <option>Monthly</option>
+                        <option>Yearly</option>
+                    </select>
+                </div>
+                <div class="best--body">
+                    <canvas id="seller-chart"></canvas>
+                </div>
+            </div>
+            <div class="best-user">
+                <div class="best--header">
+                    <div class="title">
+                        <img class="title-icon" src="../images/svg/reward.svg" alt="">
+                        <h3 class="header--title">Top Client</h3>
+                    </div>
+                    <select class="duration">
+                        <option>Weekly</option>
+                        <option>Monthly</option>
+                        <option>Yearly</option>
+                    </select>
+                </div>
+                <div class="best--body">
+                    <canvas id="client-chart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="totals-header">
+            <span><img class="header-icon" src="../images/svg/amaze-svgrepo-com.svg"></span>
+            <span class="totals-title">Totals</span>
+        </div>
+        <div class="totals-statistics">
+            <div class="total total-sellers">
+                <div class="circle-chart">
+                    <img class="total-icon" src="../images/svg/totals.svg">
+                    256 Sellers
+                </div>
+            </div>
+            <div class="total total-products">
+                <div class="circle-chart">
+                    <img class="total-icon" src="../images/svg/totals.svg">
+                    256 Clients
+                </div>
+            </div>
+            <div class="total total-clients">
+                <div class="circle-chart">
+                    <img class="total-icon" src="../images/svg/totals.svg">
+                    256 Products
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../javascript/statistics.js"></script>
+</body>
+
+</html>
