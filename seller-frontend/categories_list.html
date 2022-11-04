@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../admin-electron/src/css/reset.css">
+    <link rel="stylesheet" href="../admin-electron/src/css/list.css">
+    <title>CONQUR | Categories</title>
+</head>
+
+<body>
+    <section class="body-part">
+        <div class="top-bar">
+            <div class="right">
+                <span><img class="header-icon" src="../admin-electron/src/images/svg/amaze-svgrepo-com.svg"></span>
+                <span id="nav-title">Categories</span>
+            </div>
+            <div class="form-data">
+                <input type="text" name="category" id="category" placeholder="Category">
+                <button id="add-button" class="btn btn-head"><img
+                        src="../admin-electron/src/images/svg/add-svgrepo-com.svg">Add
+                    Category</button>
+            </div>
+
+        </div>
+        <table class="sellers-table">
+            <thead>
+                <tr>
+                    <th>CATEGORY</th>
+                    <th>DATE</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <!-- <tr>
+                    <td>Mohammad Kassem</td>
+                    <td>mohamadkassemm</td>
+                    <td class="actions">
+                        <a href="javascript:void(0);" class="edit-icon"><img
+                                src='../images/svg/edit-svgrepo-com.svg'></a>
+                        <a href="javascript:void(0);" class="delete-icon confirmation-popup-active"><img
+                                src='../images/svg/delete-svgrepo-com.svg'></a>
+                    </td>
+                    </tr> -->
+            </tbody>
+
+
+        </table>
+    </section>
+    <script src="../admin-electron/src/javascript/alert_msgs.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./assets/javascript/api/list_categories.js"></script>
+    <script src="./assets/javascript/api/add_category.js"></script>
+</body>
+
+</html>
