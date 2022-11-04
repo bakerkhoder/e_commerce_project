@@ -57,11 +57,23 @@ axios({
 
 
 //get user data
+
+
+
 async function getSeller(id) {
-  await axios.get(get_seller_api + id).then(
-    (response) => {
-      console.log(response.data)
-      if (response.data.status) {
+const data= new FormData()
+data.append("id",id)
+axios({
+    method: "post",
+    url: "http://localhost/e-commerce-project/e-commerce-server/api/get_seller_info.php",
+ data,
+    headers: { "Content-Type": "multipart/form-data" },
+  })
+    .then(function (response) {
+      //handle success
+       const res = response.data
+       console.log(res)
+    if (response.data.status) {
         //success
         console.log(response.data.data[0])
         edit_input_username.value = response.data.data[0].username
@@ -80,12 +92,12 @@ async function getSeller(id) {
       } else {
         //error
       }
-    },
-    (error) => {
-      console.log(error)
-    }
-  )
-}
+      }
+    )
+    .catch(function (response) {
+      //handle error
+      console.log(response)
+    })}
 
 const getSellers = async () => {
   const response = await axios.get(get_sellers_api)

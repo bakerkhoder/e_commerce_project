@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/list.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Dasboard Menu</title>
+</head>
+
+<body>
+    <section class="body-part">
+        <div class="top-bar">
+            <div class="right">
+                <span><img class="header-icon" src="../images/svg/amaze-svgrepo-com.svg"></span>
+                <span id="nav-title">Customers</span>
+            </div>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>NAME</th>
+                    <th>USERNAME</th>
+                    <th>EMAIL</th>
+                    <th>ACTION</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+
+            </tbody>
+         
+        </table>
+    </section>
+
+    <div id="alert">
+        <div class="confirmation-popup-container">
+            <div class="confirmation_alert">
+                <div class="title_confirmation_alert">
+                    <img class="red-alert-icon" src="../images/png/alert_icon_red.png">
+                    <p>Confirm dialog</p>
+                </div>
+                <hr>
+                <div class="confirmation_alert_description">
+                    <p id="text-alert"> Are You sure you want to delete?</p>
+                </div>
+                <div class="confirmation_alert_btns">
+                    <button class="green" id="confirm-conf-popup">Confirm</button>
+                    <button class="red" id="cancel-conf-popup">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../javascript/alert_msgs.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../javascript/api/list_client_api.js"></script>
+</body>
+
+</html>
