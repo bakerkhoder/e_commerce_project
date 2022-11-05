@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Discount</title>
+    <link rel="stylesheet" href="./assets/css/discount_popup.css">
+</head>
+
+<body>
+    <!-- start of adding discout section -->
+    <form class="discount-form">
+        <div class="modal" id="dis-modal">
+            <div>
+                <h1>Discount info</h1>
+            </div>
+            <div>
+                <label for="discode">Enter the discount code:</label>
+                <input type="text" placeholder="..." id="discode">
+            </div>
+            <div>
+                <label for="dispercentage">Enter the discount percentage:</label>
+                <input type="integer" placeholder="...%" id="dispercentage">
+            </div>
+            <div>
+                <p id="warning"></p>
+            </div>
+            <div>
+                <button class="add-dis" id="add-btn">Add discount</button>
+            </div>
+        </div>
+    </form>
+    <!-- end of adding discount section -->
+    <script src="./assets/javascript/discount.js"></script>
+</body>
+
+</html>

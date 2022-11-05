@@ -1,0 +1,143 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+
+/* Confirmation modal */
+
+.confirmation_alert {
+    border: none;
+    width: 350px;
+    height: fit-content;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
+    position: relative;
+}
+
+.confirmation-popup-container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+}
+
+.title_confirmation_alert img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.title_confirmation_alert {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+
+}
+
+.title_confirmation_alert p {
+    color: #de3030;
+    font-weight: 500;
+}
+
+.confirmation_alert hr {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.confirmation_alert_description {
+
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+
+.confirmation_alert_btns button {
+    width: 40%;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 6px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.confirmation_alert_btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.red {
+    border: 2px solid #de3030;
+    color: #de3030;
+}
+
+.red:hover {
+    background-color: rgba(222, 48, 48, 0.5);
+    border: none;
+}
+
+.green:hover {
+    background-color: rgba(5, 113, 5, 0.5);
+    border: none;
+}
+
+.green {
+    border: 2px solid rgb(5, 113, 5);
+    color: rgb(5, 113, 5);
+}
+
+
+.confirmation-popup-active {
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 70px;
+}
+
+.bg-active {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* Success message after confirmation */
+.success {
+    width: 20%;
+    height: 60px;
+    align-self: center;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    margin-left: 50px;
+
+}
+
+.success_msg {
+    color: rgb(5, 113, 5);
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.sucess-msg-div {
+    display: flex;
+    align-items: center;
+}
+
+.ok-btn {
+    display: flex;
+    justify-content: flex-end;
+}

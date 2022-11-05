@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/statistics_product.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="best-statistics">
+            <div class="best-user">
+                <div class="best--header">
+                    <div class="title">
+                        <img class="title-icon" src="../admin-electron/src/images/svg/reward.svg" alt="">
+                        <h3 class="header--title">Revenue</h3>
+                    </div>
+                    <!-- <select class="duration">
+                        <option>Weekly</option>
+                        <option>Monthly</option>
+                        <option>Yearly</option>
+                    </select> -->
+                </div>
+                <div class="best--body">
+                    <canvas id="seller-chart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h5 class="header--title center"> top 5 products</h5>
+        </div>
+        <div class="top-5-products">
+
+            <img src="../admin-electron/src/images/svg/no-profile.svg" alt="">
+            <div>product title</div>
+            <div>2000 views</div>
+        </div>
+
+    </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./assets/javascript/statistics_products.js"></script>
+    <script src="./assets/javascript/api/top_products.js"></script>
+</body>
+
+</html>

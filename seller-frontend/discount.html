@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount Table</title>
+    <!-- <link rel="stylesheet" href="./assets/css/discount-table.css"> -->
+    <link rel="stylesheet" href="../admin-electron/src/css/reset.css">
+    <link rel="stylesheet" href="../admin-electron/src/css/list.css">
+    <link rel="stylesheet" href="../admin-electron/src/css/styles.css">
+</head>
+
+<body>
+    <!-- start of content -->
+    <section class="body-part">
+        <div class="top-bar">
+            <div class="right">
+                <span><img class="header-icon" src="../admin-electron/src/images/svg/amaze-svgrepo-com.svg"></span>
+                <span id="nav-title">Discounts</span>
+            </div>
+            <button id="add-button" class="btn btn-head"><img
+                    src="../admin-electron/src/images/svg/add-svgrepo-com.svg">Add
+                Discount</button>
+        </div>
+        <table class="sellers-table">
+            <thead>
+                <tr>
+                    <th>CODE</th>
+                    <th>%</th>
+                    <th>EXPIRED</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+
+            </tbody>
+
+
+        </table>
+    </section>
+    <!-- end of content -->
+    <section class="background" id="add-popup">
+        <div class="add-form addd">
+            <span class="close" id="add-close">X</span>
+            <h1>Add Discount</h1>
+
+            <div>
+                <div style="width:100%">
+                    <div class="column-direction">
+                        <span>Code:</span>
+                        <input id="name-input" type="text">
+                        <span class="error" id="name-error"></span>
+                    </div>
+                    <div class="column-direction">
+                        <span>Percentage:</span>
+                        <input id="username-input" type="text">
+                        <span class="error" id="username-error"></span>
+                    </div>
+                    <div class="column-direction">
+                        <span>Expiry:</span>
+                        <input id="password-input" type="date">
+                        <span class="error" id="password-error"></span>
+                    </div>
+                </div>
+            </div>
+            <button class="buttons other-background add-btnn">ADD DISCOUNT</button>
+        </div>
+    </section>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./assets/javascript/validate_inputs.js"></script>
+    <script src="./assets/javascript/discount.js"></script>
+    <script src="./assets/javascript/api/discount_codes.js"></script>
+    <script src="./assets/javascript/api/add_discount.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+/* Theme colors:
+ #64C5B1 : green
+#323246: dark back */
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.edit_product_modal_btn {
+    padding: 15px;
+    background: rgba(0, 0, 0, 0);
+    border-color: #64C5B1;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #64C5B1;
+    cursor: pointer;
+}
+
+.modal-bg {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+}
+
+.bg-active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal {
+    background-color: white;
+    width: 50%;
+    height: 70%;
+    display: flex;
+    border-radius: 20px;
+}
+
+.modal-close {
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 28px;
+}
+
+.modal-close:hover {
+    opacity: 0.4;
+}
+
+.product-img {
+    width: 50%;
+    height: 100%;
+
+}
+
+.input-fields {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}
+
+.input-fields input,
+select {
+    height: 7%;
+}
+
+.input-fields label {
+    margin-top: 15px;
+    color: gray;
+    font-size: 20px;
+}
+
+input,
+textarea,
+select {
+    border-radius: 10px;
+}
+
+textarea {
+    height: 20%;
+}
+
+.edit_product_modal_save_btn {
+
+    height: 6vh;
+    width: 80%;
+    background-color: #64C5B1;
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.product-img {
+    background-image: url("../images/dummy-product-picture.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.upload-img-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.upload-img-icon img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.upload-img-icon img:hover {
+    opacity: 0.4;
+}
+
+.upload-img-icon>input {
+    display: none;
+}

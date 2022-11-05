@@ -15,11 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const fillCategories = async (parent, id) => {
     const user_id = JSON.parse(localStorage.getItem('user')).id
+    console.log(user_id)
     const categories = document.querySelector(id)
         const dataa= new FormData()
         dataa.append("id",user_id)
-    const response = await axios.get(
-      'http://localhost/e-commerce/ecommerce-server/api/get_categories_by_seller.php?',
+    const response = await axios.post(
+      'http://localhost/e-commerce-project/e-commerce-server/api/get_categories_by_seller.php',
       dataa
     )
     const data = response.data

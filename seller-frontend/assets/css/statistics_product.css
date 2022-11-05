@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Css reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 90px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 35px;
+}
+
+h4 {
+    font-size: 28px;
+}
+
+h5 {
+    font-size: 24px;
+}
+
+h6 {
+    font-size: 18px;
+}
+
+p {
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Helvetica, Arial, sans-serif;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    padding: 20px 30px;
+}
+
+/*top statistics*/
+.best-statistics {
+    display: flex;
+    justify-content: space-between;
+}
+
+.best-user {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding: 10px 20px;
+}
+
+.best--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    display: flex;
+    flex-basis: 60%;
+}
+
+.title-icon {
+    width: 36px;
+    height: 36px;
+    filter: invert(37%) sepia(94%) saturate(380%) hue-rotate(118deg) brightness(98%) contrast(91%);
+}
+
+.header--title {
+    font-size: 25px;
+    background: -webkit-linear-gradient(#323246, #64c5b1);
+    -webkit-text-fill-color: transparent;
+}
+
+.duration {
+    border: 1px solid rgb(50, 50, 70, 0.1);
+    border-radius: 10px;
+    width: fit-content;
+    font-size: 12px;
+    flex-basis: 40%;
+    height: fit-content;
+    padding: 5px 10px;
+}
+
+.best--body {
+    margin-top: 20px;
+}
+
+/*bottom statistics*/
+
+.totals-statistics {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20vh auto;
+    width: 150vh;
+}
+
+.totals-statistics>.total {
+    flex-basis: 33.33%;
+    margin-right: 20px;
+    /* width: 40vh; */
+    height: 45vh;
+}
+
+.totals-statistics>.total:last-child {
+    margin-right: 0;
+}
+
+.circle-chart {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.total-sellers>.circle-chart {
+    background: linear-gradient(90deg,
+            rgba(100, 197, 177, 1) 0%,
+            rgba(50, 50, 70, 1) 90%);
+}
+
+.total-products>.circle-chart {
+    background: linear-gradient(90deg,
+            rgba(100, 197, 177, 1) 0%,
+            rgba(50, 50, 70, 1) 52%);
+}
+
+.total-clients>.circle-chart {
+    background: linear-gradient(90deg,
+            rgba(100, 197, 177, 1) 0%,
+            rgba(50, 50, 70, 1) 90%);
+}
+
+.total-icon {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 10px;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(140deg) brightness(101%) contrast(99%);
+}
+
+/* designing top 5 products card*/
+.top-5-products {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    /* height: 45vh; */
+    background-color: #fff;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 10px 12px;
+    margin-bottom: 20px;
+}
+
+.product-card>img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.product-card>div:first-child {
+    font-size: 20px;
+}
+
+.product-card>div:last-child {
+    font-size: 12px;
+    color: #323246;
+}
+
+.center {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-size: 30px;
+    text-transform: uppercase;
+}
